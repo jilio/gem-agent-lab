@@ -1,0 +1,20 @@
+{
+  "name": "gem-agent-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tiny Bun app used to demonstrate Gem MCP agent repair loops.",
+  "scripts": {
+    "demo:checkout": "bun run src/demo/run-checkout.ts",
+    "test": "bun test",
+    "typecheck": "bunx tsc --noEmit"
+  },
+  "dependencies": {
+    "@sentry/bun": "^10.50.0",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.2",
+    "typescript": "^5.9.2"
+  }
+}
