@@ -28,6 +28,10 @@ export function calculateCheckout(input: CheckoutInput): CheckoutSummary {
 }
 
 function normalizeCoupon(coupon: string | undefined): string | null {
+  if (!coupon) {
+    throw new Error("Checkout requires a coupon code");
+  }
+
   const normalized = coupon?.trim().toUpperCase() ?? "";
 
   return normalized.length > 0 ? normalized : null;
